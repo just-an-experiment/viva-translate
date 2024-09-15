@@ -1,0 +1,85 @@
+%absolute-center {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) !important;
+}
+
+%centered-box {
+  bottom: 0;
+  height: fit-content;
+  left: 0;
+  margin: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: fit-content;
+}
+
+%center-x {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+%btn-reset {
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+
+  svg {
+    fill: black !important;
+    path: {
+      fill: black !important;
+    }
+  }
+}
+
+%no-display {
+  display: none !important;
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+// UI component variations.
+%toggle-container-grey {
+
+  .template-switch {
+    .template-slider {
+      background: transparent !important;
+      border: 1px solid $vi-grey;
+      margin: 0;
+  
+      &::before {
+        background-color: darken($vi-white, 5%);
+      }
+    }
+
+    input:checked + .template-slider {
+      background: $vi-primary-gradient;
+    }
+  }
+}
+
+%toggle-compact {
+  .template-switch {
+    height: 14px;
+    width: 23px;
+
+    .template-slider {  
+      height: 100%;
+
+      &::before {
+        height: 12px;
+        top: -1px;
+        transform: translateX(-1px) !important;
+        width: 12px;
+      }
+    }
+
+    input:checked + .template-slider::before {
+      transform: translateX(8px) !important;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import '../common/_typography';
+.viva_styles_master {
+  /* statics  */
+  @import '../common/_variables';
+  @import '../common/_mixins';
+  @import '../common/_animations';
+  @import '../common/_extends';
+
+  /* components */
+  @import '../common/components/_select';
+  @import '../common/components/_buttons';
+  @import '../app-meet-live-cc/components/_slider';
+  @import '../app-meet-live-cc/components/_error-popup';
+
+  /* styles */
+  @import './popup';
+}

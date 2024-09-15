@@ -1,0 +1,58 @@
+@use './../variables';
+
+.viva-select {
+  appearance: none !important;
+  background-color: transparent !important;
+  background-image: url('chrome-extension://__MSG_@@extension_id__/images/icons/angle-down.svg') !important;
+  background-size: 8px;
+  background-position: calc(100% - 8px) center !important;
+  background-repeat: no-repeat !important;
+  border: 1px solid $vi-border-grey !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  color: $vi-grey !important;
+  cursor: pointer !important;
+  display: flex !important;
+  font-family: $vi-text-font !important;
+  font-size: 14px;
+  line-height: 1em;
+  padding: 8px 0 8px 8px !important;
+  transition: background-color .3s ease-in-out !important;
+  transform: .2s;
+  min-width: 100px;
+  margin: 4px 0;
+  line-height: 18px;
+
+  &[hidden] {
+    display: none !important;
+    pointer-events: none;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $vi-purple !important;
+  }
+
+  &:focus {
+    outline: none !important;
+  }
+
+  &--title {
+    background-image: url('chrome-extension://__MSG_@@extension_id__/images/icons/caret-down.svg') !important;
+    background-position: calc(100% - 3px) center !important;
+    background-repeat: no-repeat !important;
+    background-size: 13px;
+    border: none !important;
+    color: $vi-text-color !important;
+    font-family: $vi-title-font !important;
+
+    &:hover,
+    &:focus {
+      background-color: $vi-hover-bg-gray !important;
+    }
+  }
+
+  &--error {
+    border: 1px solid $vi-disable-red !important;
+  }
+}

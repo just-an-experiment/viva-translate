@@ -1,0 +1,199 @@
+/******************/
+/** LOGIN POPUP **/
+
+.login-popup {
+  align-items: center;
+  background-color: $vi-bg-black;
+  border-radius: 15px;
+  display: flex;
+  flex-flow: column nowrap;
+  height: auto;
+  justify-content: flex-start;
+  max-width: 342px;
+  padding: 35px 26px 0;
+  pointer-events: all;
+  position: absolute;
+  transition: right 0.2s ease-in-out, top 0.2s ease-in-out;
+  width: fit-content;
+  z-index: 16;
+
+  &__close {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    fill: $vi-white;
+    position: absolute;
+    right: 13px;
+    top: 13px;
+
+    & svg {
+      fill: $vi-white;
+      height: 12px;
+      width: 12px;
+    }
+  }
+
+  &__img {
+    height: 70px;
+    margin: 12px 0;
+    width: 70px;
+  }
+
+  &__text {
+    color: $vi-white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -1.1%;
+    line-height: 24px;
+    margin: 0;
+    max-width: 250px;
+    text-align: center;
+  }
+}
+
+.primary-cta,
+.login-popup__cta {
+  background-color: $vi-bg-black;
+  border: 2px solid $vi-bg-black;
+  border-radius: 25px;
+  box-shadow: 7px 7px 16px 0 rgba(0, 0, 0, .3), -3px -3px 14px -5px rgba(255, 255, 255, .3);
+  color: $vi-orange;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 10px 15px;
+  position: relative;
+  top: 20px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  width: auto;
+}
+
+.primary-cta::after,
+.login-popup__cta::after {
+  background: #fff;
+  content: '';
+  height: 155px;
+  left: -75px;
+  opacity: 0.1;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 50px;
+  z-index: 1;
+}
+
+.primary-cta span,
+.login-popup__cta span {
+  z-index: 5;
+}
+
+.primary-cta:hover::after,
+.login-popup__cta:hover::after {
+  left: 120%;
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.login-intro,
+.login-text {
+  color: $vi-white;
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+}
+
+.login-text {
+  color: $vi-white;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.viva-button-link {
+  background: transparent;
+  color: $vi-orange;
+  font-size: 12px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+}
+
+.viva-animated-button {
+  background-color: $vi-bg-black;
+  border: 2px solid $vi-bg-black;
+  border-radius: 25px;
+  box-shadow: 7px 7px 16px 0 rgba(0, 0, 0, .3), -3px -3px 14px -5px rgba(255, 255, 255, .3);
+  color: $vi-orange;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  height: auto;
+  margin: 5px 0;
+  overflow: hidden;
+  padding: 10px 15px;
+  position: relative;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  width: auto;
+
+  &:after {
+    background: #fff;
+    content: '';
+    height: 155px;
+    left: -75px;
+    opacity: 0.1;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    z-index: 1;
+  }
+
+  &:hover:after {
+    left: 120%;
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  & span {
+    z-index: 5;
+  }
+}
+
+.viva-login-panel {
+  background-color: #272a2c;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  width: 100%;
+  padding: 28px 8px;
+  box-sizing: border-box;
+  font-family: 'Nunito', serif;
+  color: $vi-white;
+  text-align: center;
+}
+
+.viva-login-panel * {
+  box-sizing: border-box;
+}
+
+.popup-login-button {
+  margin: 20px auto 15px;
+}
+
+.viva-context-login {
+  background-color: #272a2c;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  padding: 28px 8px;
+  box-sizing: border-box;
+  font-family: 'Nunito', serif;
+  color: $vi-white;
+  text-align: center !important;
+  align-items: center !important;
+  width: 270px;
+}

@@ -1,0 +1,120 @@
+
+/***********************/
+/* TOGGLE SWITCHER */
+
+/* The slider */
+.template-slider {
+  background-color: $vi-hover-bg-gray;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+
+  &::before {
+    background-color: $vi-white;
+    border: 1px solid #9a99a2;
+    bottom: -1px;
+    content: "";
+    height: 15px;
+    left: 0;
+    position: absolute;
+    transition: all .4s ease-in-out;
+    width: 15px;
+  }
+
+  &.template-switch-round {
+    border-radius: 34px;
+    &:before {
+      border-radius: 50%;
+    }
+  }
+}
+
+/* The switch - the box around the slider */
+.template-switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+
+  & input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + .template-slider {
+      background: $vi-primary-gradient;
+
+      &:before {
+        -webkit-transform: translateX(14px);
+        -ms-transform: translateX(14px);
+        transform: translateX(14px);
+      }
+    }
+
+    &:focus + .template-slider {
+      box-shadow: 0 0 1px $vi-primary-color;
+    }
+  }
+}
+
+.viva-datalist {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 12px;
+  padding: 0 5px;
+  color: rgb(186, 186, 186);
+  font-size: 14px;
+}
+
+.viva-slider-container {
+  width: 100%;
+  background: transparent;
+  outline: none;
+  height: 12px;
+  margin-top: 7px;
+}
+
+.viva-slider {
+  width: 100%;
+}
+
+input[type="range"].viva-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+  height: 4px;
+  background: rgb(186, 186, 186);
+  margin: 0;
+  margin-bottom: 6px;
+  padding: 0;
+}
+
+/* Thumb: webkit */
+input[type="range"].viva-slider::-webkit-slider-thumb {
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 12px;
+  width: 12px;
+  margin-bottom: 18px;
+  background-color: $vi-white;
+  border-radius: 50%;
+  transition: 0.4s ease-in-out 0s;
+}

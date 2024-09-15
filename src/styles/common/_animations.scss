@@ -1,0 +1,81 @@
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes scale-appear {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0) scale(0);
+    transform-origin: center;
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    transform-origin: center;
+  }
+}
+
+@keyframes interim-animated {
+  0% {
+    background-color: $vi-white;
+  }
+
+  20% {
+    background-color: darken($vi-bg-gray, 5%);
+  }
+
+  50% {
+    background-color: $vi-white;
+  }
+
+  80% {
+    background-color: darken($vi-bg-gray, 5%);
+  }
+
+  100% {
+    background-color: $vi-bg-gray;
+  }
+}
+
+@mixin blink($duration: .3s) {
+  @keyframes blink-animation {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  animation: blink-animation $duration infinite;
+}
+
+@mixin slide-up-appear($transformY: 20px, $duration: .8s, $direction: forwards, $delay: 0s) {
+  @keyframes slide-up-appear {
+    0% {
+      opacity: 0;
+      transform: translateY(#{$transformY});
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  & {
+    animation: slide-up-appear $duration ease-in-out $direction;
+    animation-delay: $delay;
+    opacity: 0;
+  }
+}

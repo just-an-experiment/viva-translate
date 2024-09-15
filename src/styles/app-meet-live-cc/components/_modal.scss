@@ -1,0 +1,132 @@
+.viva-modal {
+  @extend %centered-box;
+
+  $self: &;
+  animation: scale-appear .4s;
+  animation-fill-mode: forwards;
+  backdrop-filter: blur(11px);
+  background-color: $vi-blur-bg-color;
+  border-radius: 8px;
+  box-shadow: $vi-popup-boxshadow;
+  display: flex;
+  flex-flow: column nowrap;
+  opacity: 0;
+  padding: 48px 34px 24px;
+  width: 400px;
+  z-index: 99999999999999999999;
+
+  &__close {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    height: 20px;
+    outline: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 20px;
+
+    svg {
+      fill: $vi-white;
+      transition: transform .3s ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        transform: scale(1.15);
+      }
+    }
+  }
+
+  &__title {
+    color: $vi-white;
+    font-family: $vi-title-font;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0;
+    text-align: center;
+    user-select: text;
+  }
+
+  &__desc {
+    color: $vi-grey;
+    font-family: $vi-text-font;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: auto;
+    margin: 10px 0;
+    text-align: center;
+    user-select: text;
+  }
+
+  &__form {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  &__btn-area {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+
+    &.one-btn {
+      button {
+        margin-left: auto;
+      }
+    }
+
+    &.three-btn {
+      button {
+        &:first-child {
+          margin: 0 auto 0 0;
+        }
+
+        &:last-child {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  &__options {
+    margin: 16px 0;
+  }
+
+  &--compact {
+    padding-top: 34px !important;
+    width: 580px !important;
+
+    #{$self}__title {
+      font-size: 16px !important;
+      text-align: left !important;
+    }
+
+    #{$self}__desc {
+      font-size: 14px !important;
+      margin-bottom: 30px !important;
+      text-align: left !important;
+    }
+  }
+
+  &__show-again {
+    display: flex;
+    align-items: center;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .viva-select {
+    option {
+      background: $vi-dark-purple !important;
+      color: $vi-grey;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.viva-subtitle-frame {
+  border-radius: 6px;
+  box-sizing: border-box;
+  cursor: move !important;
+  height: max-content;
+  max-width: 100%;
+  padding: 16px;
+  pointer-events: none;
+  position: fixed;
+  width: max-content;
+  z-index: 999999;
+
+  &.has-interim-text {
+    backdrop-filter: blur(11px);
+    background: $vi-blur-bg-color !important;
+    pointer-events: all !important;
+    
+    &:hover {
+      @include border-gradient(7px, 0px);
+
+      &:before {
+        opacity: 0.75;
+      }
+    }
+  }
+
+  .viva-subtitle-wrapper2 {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+
+  .viva-subtitle-wrapper {
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-direction: column;
+    height: max-content;
+    line-height: 1em;
+    max-width: 100%;
+    font-size: 20px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    &.text-size__SM { font-size: 14px; }
+    &.text-size__MD { font-size: 20px; }
+    &.text-size__LG { font-size: 24px; }
+
+    &__text {
+      box-sizing: border-box;
+      color: $vi-white;
+      font-family: $vi-text-font;
+      overflow: hidden;
+      padding: 5px 10px;
+      text-align: left;
+      width: max-content;
+      display: flex;
+      flex-wrap: wrap !important;
+      word-wrap: break-word !important;
+      white-space: wrap !important;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .viva-subtitle-frame {
+    left: 16px !important;
+    min-width: auto !important;
+    transform: translateX(0px) !important;
+    width: 90%;
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Viva Translate: Transcreva Áudio do Google Meet e Navegador",
+    "description": "Chrome store app name"
+  },
+  "appDesc": {
+    "message": "Transcreva e traduza chamadas de vídeo em tempo real e muito mais em 8 idiomas.",
+    "description": "Chrome store app description"
+  }
+}

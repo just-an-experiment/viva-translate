@@ -1,0 +1,64 @@
+.viva-tooltip {
+  @extend %center-x;
+
+  background-color: $vi-bg-black;
+  border-radius: 5px;
+  height: fit-content;
+  max-width: 250px;
+  padding: 3px 10px;
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  width: fit-content;
+  z-index: 2;
+
+  &[hidden] {
+    display: flex !important;
+    pointer-events: none;
+    user-select: none;
+    visibility: hidden;
+  }
+
+  &--bottom {
+    transform: translate(-50%, calc(100% + 5px));
+  }
+
+  &--top {
+    transform: translate(-50%, calc(-100% - 5px));
+  }
+
+  &--static {
+    bottom: 60px !important;
+    max-width: 300px;
+    padding: 10px;
+    pointer-events: auto !important;
+    right: unset;
+    top: auto !important;
+    width: max-content;
+  }
+
+  &__text {
+    color: $vi-white;
+    font-family: $vi-text-font;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: normal;
+  }
+
+  &--lg {
+    @include flex(center, center, column nowrap);
+
+    backdrop-filter: blur(8px);
+    background-color: $vi-black;
+    border: 1px solid $vi-border-color;
+    max-width: 350px;
+    padding: 20px;
+
+    .viva-tooltip__text {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "translation": {
+    "languages": {
+      "BG": "ブルガリア語",
+      "CS": "チェコ語",
+      "DA": "デンマーク語",
+      "DE": "ドイツ語",
+      "EL": "ギリシャ語",
+      "EN": "英語",
+      "ES": "スペイン語",
+      "ET": "エストニア語",
+      "FI": "フィンランド語",
+      "FR": "フランス語",
+      "HU": "ハンガリー語",
+      "ID": "インドネシア語",
+      "IT": "イタリア語",
+      "JA": "日本語",
+      "KO": "韓国語",
+      "LT": "リトアニア語",
+      "LV": "ラトビア語",
+      "NB": "ノルウェー語 Bokmål",
+      "NL": "オランダ語",
+      "PL": "ポーランド語",
+      "PT": "ポルトガル語",
+      "RO": "ルーマニア語",
+      "RU": "ロシア語",
+      "SK": "スロバキア語",
+      "SL": "スロベニア語",
+      "SV": "スウェーデン語",
+      "TR": "トルコ語",
+      "UK": "ウクライナ語",
+      "ZH": "中国語"
+    },
+    "general": {
+      "ok": "OK",
+      "detecting": "検出中...",
+      "select": "選択",
+      "cancel": "キャンセル",
+      "copy": "コピー",
+      "copied": "コピー済み",
+      "live_cc": "字幕",
+      "stop_live_cc": "キャプチャを停止",
+      "version": "バージョン"
+    },
+    "general_words": {
+      "no_thanks": "いいえ、結構です",
+      "add": "追加",
+      "or": "または"
+    },
+    "notifications": {
+      "reload_popup": {
+        "description": "Viva Translate を使用するには、ページをリロードしてください。",
+        "button": "リロード"
+      },
+      "failed_live_cc": {
+        "description": "現在のブラウザータブでライブ字幕のキャプチャを開始する際にエラーが発生しました。ページをリロードしてもう一度試してください。",
+        "button": "リロード"
+      },
+      "unknown_error": {
+        "description": "不明なエラーが発生しました。ページをリロードしてもう一度試してください。問題が解決しない場合は、お問い合わせください。",
+        "button": "リロード"
+      }
+    },
+    "options_popup": {
+      "translation_error": "翻訳中にエラーが発生しました",
+      "toggle_highlight": "ハイライトして翻訳",
+      "toggle_vid_translation": "GMeet の翻訳",
+      "input_placeholder": "サポートされている言語のいずれかで何かを書く"
+    },
+    "highlight_box": {
+      "title": "翻訳先"
+    },
+    "meetings": {
+      "deactivate_popup_text": "Viva アイコンをクリックし、オプションをアクティブにすることで、トランスクリプトを再度有効にすることができます。",
+      "speaker_transcription": "トランスクリプション言語",
+      "copied": "リンクをコピーしました!",
+      "new_message": "新しいメッセージ",
+      "new_messages": "新しいメッセージ",
+      "explanation": {
+        "settings": "言語設定などを変更",
+        "cc": "映画の字幕のように Viva を表示",
+        "side_panel": "Google ミーティングで最も便利な場所に Viva のボックスを合わせる",
+        "minimize": "ボックスを表示したくない場合は Viva を最小化します。一時停止しない限り、翻訳を続けます",
+        "summary": "セッションの構造化されたノートを入手するには、要約セクションをご覧ください"
+      },
+      "viva_messages": {
+        "microphone_target": "あなたの音声は次の言語に書き写されます ",
+        "speaker_target": "会議は次の言語に書き写されます ",
+        "pause_transcript": "トランスクリプトが一時停止されました。トランスクリプションや翻訳は受け取れません。",
+        "resume_transcript": "Viva は今すぐトランスクリプションと翻訳を開始します！ 🤩"
+      },
+      "settings": {
+        "title": "設定",
+        "lang_picker_title": "言語設定",
+        "show_own_transcription": "自分のトランスクリプションを表示する場合はオンにします",
+        "learning_mode": "学習モード"
+      },
+      "summaries": {
+        "placeholder": "自動生成された要約はまだありません。会話中に表示されます。"
+      },
+      "tooltips": {
+        "stop_recording": "トランスクリプトの終了",
+        "pause_recording": "トランスクリプトの一時停止",
+        "start_recording": "トランスクリプトの再開",
+        "minimize": "Viva を最小化",
+        "summary": "会議の要約",
+        "captions": "字幕の表示/非表示",
+        "settings": "設定",
+        "pause_suggestion": "Vivaは会議の書き起こしを続けます。書き起こしを一時停止したい場合は、トランスクリプトウィンドウの左上にある一時停止アイコンをクリックしてください。",
+        "button": "わかりました！",
+        "switchPanel": "パネルの切り替え",
+        "active": "Viva がアクティブです",
+        "not_active": "Viva が非アクティブです"
+      },
+      "connection_error": {
+        "message": "ネットワーク接続が失われました。再接続を試行しています。"
+      }
+    },
+    "errors": {
+      "invalid_lang": "ポルトガル語、スペイン語、または英語でより長い文章を書いてみてください",
+      "selection_error": "選択した内容を翻訳できませんでした。より大きなテキストで再試行してください。",
+      "try_again": "翻訳を完了できませんでした。もう一度お試しください。",
+      "lang_not_found": "言語が認識されません"
+    },
+    "styles": {
+      "size": {
+        "SM": "小",
+        "MD": "中",
+        "LG": "大"
+      },
+      "subtitle_font": "字幕のサイズ"
+    },
+    "any_web_transcription": {
+      "output": "翻訳先"
+    },
+    "transcriptions_result": {
+      "show_original": "オリジナルを表示",
+      "show_translated": "翻訳を表示",
+      "download": "ダウンロード",
+      "title": "タイトル",
+      "type": "タイプ",
+      "url": "URL",
+      "startTime": "開始時間",
+      "transcriptions": "トランスクリプション",
+      "summary": "概要"
+    }
+  }
+}

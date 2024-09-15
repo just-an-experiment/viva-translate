@@ -1,0 +1,34 @@
+{
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "airbnb-base",
+    "airbnb-typescript/base"
+  ],
+  "parserOptions": {
+    "project": [
+      "./tsconfig.eslint.json"
+    ]
+  },
+  "ignorePatterns": [
+    "*.config.js"
+  ],
+  "rules": {
+    "no-param-reassign": [2, { 
+        "props": false
+    }],
+    "no-console": 2,
+    "no-cycle": 0,
+    "max-len":[1,{
+      "code": 120
+    }],
+    "@typescript-eslint/comma-dangle":0,
+    "operator-linebreak": 0,
+    "implicit-arrow-linebreak": 0,
+    "prefer-destructuring": 0,
+    "default-case": 0,
+    "eqeqeq": 1,
+    "@typescript-eslint/indent": 1,
+    "object-curly-newline": 1,
+    "linebreak-style": 0
+  }
+}

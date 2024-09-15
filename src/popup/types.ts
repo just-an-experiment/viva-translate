@@ -1,0 +1,25 @@
+export type PopupElementTypes = {
+  translationError: HTMLElement;
+  translationErrorText: HTMLElement;
+  growWrapper: HTMLElement;
+  inputField: HTMLInputElement;
+  clearInput: HTMLButtonElement;
+  outputBox: HTMLElement;
+  outputField: HTMLElement;
+  charCount: HTMLElement;
+  titleToTranslate: HTMLElement;
+  titleTranslated: HTMLElement;
+  switchLangButton: HTMLElement;
+  copyButton: HTMLElement;
+  liveCCButton: HTMLButtonElement;
+  translationPopup: HTMLElement;
+  loadingIcon: HTMLElement;
+  highlightToggle: HTMLInputElement;
+  highlightToolboxTitle: HTMLElement;
+  videoCallToggle: HTMLInputElement;
+  videoCallTitle: HTMLElement;
+  settingsWrapper: HTMLDivElement;
+  translationButtonBar: HTMLDivElement;
+  version: HTMLSpanElement;
+  translateSection: HTMLDivElement;
+};

@@ -1,0 +1,111 @@
+.resize-container {
+  &__bottom,
+  &__left,
+  &__right,
+  &__top,
+  &__diagonal-left-bottom,
+  &__diagonal-right-bottom,
+  &__diagonal-left-top,
+  &__diagonal-right-top {
+    z-index: 1000;
+  }
+
+  &__top {
+    border-radius: 50%;
+    cursor: ns-resize;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: -10px;
+    right: 0;
+  }
+
+  &__right {
+    border-radius: 50%;
+    bottom: unset;
+    cursor: ew-resize;
+    height: 100%;
+    left: unset;
+    position: absolute;
+    right: -10px;
+    top: 0;
+    width: 20px;
+  }
+
+  &__bottom {
+    border-radius: 50%;
+    bottom: -10px;
+    cursor: ns-resize;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+
+  &__left {
+    border-radius: 50%;
+    bottom: unset;
+    cursor: ew-resize;
+    height: 100%;
+    left: -10px;
+    position: absolute;
+    right: unset;
+    top: 0;
+    width: 20px;
+  }
+
+  &__diagonal-left-bottom,
+  &__diagonal-right-bottom {
+    border-radius: 50%;
+    bottom: 0px;
+    height: 8px;
+    position: absolute;
+    top: unset;
+    width: 8px;
+  }
+
+  &__diagonal-left-bottom {
+    cursor: nesw-resize;
+    right: unset;
+    width: 20px;
+    height: 20px;
+    left: -10px;
+    bottom: -10px;
+  }
+
+  &__diagonal-right-bottom {
+    cursor: nwse-resize;
+    left: unset;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    bottom: -10px;
+  }
+
+  &__diagonal-left-top,
+  &__diagonal-right-top {
+    border-radius: 50%;
+    bottom: unset;
+    height: 8px;
+    position: absolute;
+    top: 0px;
+    width: 8px;
+  }
+
+  &__diagonal-left-top {
+    cursor: nwse-resize;
+    right: unset;
+    width: 20px;
+    height: 20px;
+    left: -10px;
+    top: -10px;
+  }
+  &__diagonal-right-top {
+    cursor: nesw-resize;
+    left: unset;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    top: -10px;
+  }
+}

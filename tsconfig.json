@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "target": "ES2021",
+    "lib": ["DOM", "ES2021", "WebWorker", "DOM.Iterable"],
+    "baseUrl": "./src",
+    "rootDir": "./src",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "ES2020",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noErrorTruncation": true,
+    "noEmit": false,
+    "sourceMap": true,
+    "paths": {
+      "@config": ["./config/index.ts"],
+      "~inject-config-js": ["./config/build.config.js"]
+    },
+    "types": ["chrome", "audioworklet"]
+  },
+  "include": ["./src/**/*"],
+  "exclude": [
+    "./dist/**/*",
+    "node_modules"
+  ]
+}

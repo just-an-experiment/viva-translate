@@ -1,0 +1,702 @@
+$vi-ext-amount-of-buttons: 4;
+
+/*************/
+/** Toolbox **/
+/*************/
+.viva-activator-btn{
+  width: 48px!important;
+  height: 48px!important;
+  display: block;
+  text-align: center !important;
+
+  img{
+    margin: 9px 0 0 9px !important;
+    transform: unset !important;
+    position: unset !important;
+  }
+}
+
+.viva-toolbox {
+  height: 50px;
+  position: fixed;
+  right: 15px;
+  top: 100px;
+  width: 50px;
+  z-index: 1000000000;
+
+  /* BUTTONS */
+  &:hover .viva-toolbox__buttons {
+    height: 150px;
+    transition: height 0s ease-in-out;
+    z-index: 1;
+
+    .viva-toolbox__btn {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  /* TOGGLE */
+  &__toggle {
+    filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.5));
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    z-index: 2;
+
+    &:hover {
+      cursor: move;
+    }
+  }
+
+  & .viva-toolbox__buttons {
+    position: absolute;
+  }
+
+  /* TOOLTIP */
+  &__tooltip {
+    align-items: center;
+    background-color: $vi-white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-shadow: none !important;
+    color: $vi-black;
+    display: flex;
+    font-family: $vi-text-font;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    height: auto;
+    justify-content: center;
+    letter-spacing: 0.3px !important;
+    margin: 0 !important;
+    max-height: 35px;
+    min-width: 210px;
+    opacity: 0;
+    padding: 10px !important;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: auto;
+
+    &--disable {
+      min-width: 250px;
+    }
+
+    &::before {
+      background-color: $vi-white;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2) !important;
+      content: '';
+      height: 12px;
+      position: absolute;
+      right: -4px;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      width: 12px;
+      z-index: -1;
+    }
+  }
+
+  &__btn {
+    align-items: center;
+    background-color: $vi-white;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    box-shadow: 1px 1px 7px 2px rgba(0, 0, 0, 0.3) !important;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    opacity: 0;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity .2s ease-in-out;
+    width: 40px;
+
+    &:before {
+      content: '';
+      width: fit-content;
+    }
+
+    &:disabled {
+      background-color: #e3e3e3;
+      border: 2px solid transparent;
+
+      .viva-toolbox__tooltip {
+        color: #a3a3a3;
+      }
+    }
+
+    &:disabled:hover {
+      cursor: not-allowed;
+    }
+
+    & .btn-icon {
+      height: 20px !important;
+      padding: 0 !important;
+      pointer-events: none;
+      width: auto;
+
+      &--confirm {
+        display: none;
+      }
+    }
+
+    &--active,
+    &:not(.viva-toolbox__btn--active):not(.viva-toolbox__btn--confirm):not(:disabled):hover,
+    .viva-toolbox__btn:not(.viva-toolbox__btn--active):not(.viva-toolbox__btn--confirm):not(:disabled):focus {
+      background-color: $vi-white;
+      border: 2px solid $vi-green !important;
+    }
+
+    &:not(:disabled):hover,
+    &--confirm:not(:disabled):hover {
+      background-color: #e3e3e3;
+      border: 2px solid $vi-disable-red !important;
+    }
+
+    &:first-child {
+      transition-delay: 0s;
+
+      .viva-toolbox__tooltip {
+        right: 0;
+        top: -47px;
+
+        &::before {
+          position: absolute;
+          right: 12px;
+          bottom: -5px;
+          top: unset !important;
+          transform: rotate(45deg);
+        }
+      }
+    }
+    
+    &:nth-child(2) {
+      transition-delay: .12s;
+
+      .viva-toolbox__tooltip {
+        position: absolute;
+        right: 50px;
+        top: 0;
+
+        &::before {
+          right: -5px;
+          top: 51%;
+          transform: rotate(45deg), translateY(-50%);
+        }
+      }
+    }
+    
+    &:nth-child(3) {
+      transition-delay: .24s;
+
+      .viva-toolbox__tooltip {
+        right: 55px;
+        top: 0;
+
+        &::before {
+          right: -5px;
+          top: 51%;
+          transform: rotate(45deg), translateY(-50%);
+        }
+      }
+    }
+    
+    &:nth-child(4) {
+      transition-delay: .36s;
+
+      .viva-toolbox__tooltip {
+        top: 50px;
+        right: 0;
+
+        &::before {
+          right: 10px;
+          top: -4px;
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    &:not(.viva-toolbox__btn--active):hover .viva-toolbox__tooltip:not(.viva-toolbox__tooltip--disable):not(.viva-toolbox__tooltip--confirm),
+    &:not(.viva-toolbox__btn--active):focus .viva-toolbox__tooltip--confirm,
+    &--active:hover .viva-toolbox__tooltip--disable {
+      opacity: 1;
+      width: fit-content;
+    }
+
+    &--confirm:focus {
+      .btn-icon {
+        display: none;
+      }
+
+      .btn-icon--confirm {
+        display: block;
+      }
+    }
+  }
+
+  /****************************/
+  /* Right side configuration */
+  &--right {
+    .viva-toolbox__toggle {
+      right: 0;
+    }
+
+    .viva-toolbox__buttons {
+      height: 0;
+      right: 0;
+      top: -50px;
+      transition: height 0s ease-in-out 0.5s;
+      width: 100px;
+    }
+
+    .viva-toolbox__btn {
+      &:first-child {
+        right: 6px;
+      }
+
+      &:nth-child(2) {
+        left: 0;
+        top: calc(30% - 15px);
+      }
+
+      &:nth-child(3) {
+        bottom: calc(30% - 15px);
+        left: 0;
+      }
+
+      &:nth-child(4) {
+        bottom: 0;
+        right: 6px;
+      }
+    }
+  }
+
+  /****************************/
+  /* Left side configuration */
+  &--left {
+    .viva-toolbox__toggle {
+      left: 0;
+    }
+
+    .viva-toolbox__buttons {
+      height: 0;
+      left: 0;
+      top: -50px;
+      transition: height 0s ease-in-out 0.5s;
+      width: 100px;
+    }
+
+    .viva-toolbox__btn {
+      &:first-child {
+        left: 6px;
+      }
+
+      &:nth-child(2) {
+        right: 0;
+        top: calc(30% - 15px);
+      }
+
+      &:nth-child(3) {
+        bottom: calc(30% - 15px);
+        right: 0;
+      }
+
+      &:nth-child(4) {
+        bottom: 0;
+        left: 6px;
+      }
+
+      &:first-child,
+      &:nth-child(4) {
+        .viva-toolbox__tooltip {
+          left: 0;
+
+          &::before {
+            left: 12px;
+          }
+        }
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        .viva-toolbox__tooltip {
+          left: 50px;
+
+          &::before {
+            left: -4px;
+          }
+        }
+      }
+    }
+  }
+
+  /****************************/
+  /* Bottom side configuration */
+  &--bottom {
+    .viva-toolbox__buttons {
+      bottom: 0;
+      height: 100px;
+      left: -50px;
+      transition: width 0s ease-in-out 0.5s;
+      width: 150px;
+    }
+
+    .viva-toolbox__btn {
+      &:first-child {
+        bottom: 8px;
+        left: 0;
+        z-index: 1;
+
+        .viva-toolbox__tooltip {
+          left: 0;
+          bottom: -50px;
+
+          &::before {
+            bottom: -4px;
+            left: 12px;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        bottom: 60px;
+        left: calc(30% - 15px);
+      }
+
+      &:nth-child(3) {
+        bottom: 60px;
+        right: calc(30% - 15px);
+
+        .viva-toolbox__tooltip {
+          left: 50px;
+
+          &::before {
+            left: -5px;
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        bottom: 8px;
+        right: 0;
+
+        .viva-toolbox__tooltip {
+          bottom: 50px;
+          right: 0;
+          top: unset;
+
+          &::before {
+            bottom: -4px;
+            right: 12px;
+            top: unset;
+          }
+        }
+      }
+    }
+  }
+
+  /****************************/
+  /* Top side configuration */
+  &--top {
+    .viva-toolbox__buttons {
+      height: 100px;
+      top: 0;
+      left: -50px;
+      transition: width 0s ease-in-out 0.5s;
+      width: 150px;
+    }
+
+    .viva-toolbox__btn {
+      &:first-child {
+        left: 0;
+        top: 8px;
+        z-index: 1;
+
+        .viva-toolbox__tooltip {
+          left: 0;
+          top: 50px;
+
+          &::before {
+            left: 12px;
+            top: -4px !important;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        left: calc(30% - 15px);
+        top: 60px;
+      }
+
+      &:nth-child(3) {
+        right: calc(30% - 15px);
+        top: 60px;
+
+        .viva-toolbox__tooltip {
+          left: 50px;
+
+          &::before {
+            left: -5px;
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        left: 110px;
+        top: 8px;
+      }
+    }
+  }
+
+  /****************************/
+  /* Center configuration */
+  &--center {
+    .viva-toolbox__buttons {
+      height: 150px;
+      top: -50px;
+      left: -50px;
+      transition: width 0s ease-in-out .5s, height 0s ease-in-out .5s;
+      width: 150px;
+    }
+
+    .viva-toolbox__btn {
+      &:first-child {
+        left: 55px;
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        left: 0;
+        top: 55px;
+      }
+
+      &:nth-child(3) {
+        right: 0;
+        top: 55px;
+
+        .viva-toolbox__tooltip {
+          left: 50px;
+
+          &::before {
+            left: -4px;
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        bottom: 0;
+        left: 55px;
+      }
+
+      &:first-child,
+      &:nth-child(4) {
+        .viva-toolbox__tooltip,
+        .viva-toolbox__tooltip::before {
+          right: unset;
+        }
+      }
+    }
+  }
+
+  /**********************************/
+  /* Top Left & right configuration */
+  &--top-left,
+  &--top-right {
+    .viva-toolbox__buttons,
+    &:hover .viva-toolbox__buttons {
+      top: 0;
+      height: calc((1 + #{$vi-ext-amount-of-buttons}) * 50px);
+      left: 0;
+      transition: height 0s ease-in-out 0.5s;
+      width: 50px;
+    }
+
+    .viva-toolbox__btn {
+      &:first-child {
+        left: 5px;
+        top: 60px;
+      }
+
+      &:nth-child(2) {
+        left: 5px;
+        top: 110px;
+      }
+
+      &:nth-child(3) {
+        left: 5px;
+        top: 160px;
+      }
+
+      &:nth-child(4) {
+        left: 5px;
+        top: 210px;
+      }
+    }
+  }
+
+  &--top-left {
+    .viva-toolbox__btn {
+      &:nth-child(2),
+      &:nth-child(3),
+      &:first-child {
+        .viva-toolbox__tooltip {
+          left: 55px;
+          top: 0;
+
+          &::before {
+            bottom: 10px;
+            left: -4px;
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        .viva-toolbox__tooltip {
+          left: 0;
+
+          &::before {
+            left: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  &--top-right {
+    .viva-toolbox__btn {
+      &:first-child .viva-toolbox__tooltip {
+        right: 55px;
+        top: 0;
+
+        &::before {
+          bottom: 10px;
+          right: -4px;
+        }
+      }
+    }
+  }
+
+  /**************************************/
+  /* Bottom Left & right configuration */
+  &--bottom-left,
+  &--bottom-right {
+    .viva-toolbox__buttons,
+    &:hover .viva-toolbox__buttons {
+      bottom: 0;
+      height: calc((1 + #{$vi-ext-amount-of-buttons}) * 50px);
+      left: 0;
+      transition: height 0s ease-in-out 0.5s;
+      width: 50px;
+    }
+
+    .viva-toolbox__btn {
+      &:first-child {
+        bottom: 60px;
+        left: 5px;
+      }
+
+      &:nth-child(2) {
+        bottom: 110px;
+        left: 5px;
+      }
+
+      &:nth-child(3) {
+        bottom: 160px;
+        left: 5px;
+      }
+
+      &:nth-child(4) {
+        bottom: 210px;
+        left: 5px;
+      }
+    }
+  }
+
+  &--bottom-right {
+    .viva-toolbox__btn {
+      &:first-child {
+        .viva-toolbox__tooltip {
+          right: 55px;
+          top: 0;
+
+          &::before {
+            bottom: 10px;
+            right: -4px;
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        .viva-toolbox__tooltip {
+          right: 0;
+          top: -50px;
+
+          &::before {
+            bottom: -4px;
+            left: unset;
+            right: 12px;
+            top: unset;
+          }
+        }
+      }
+    }
+  }
+
+  &--bottom-left {
+    .viva-toolbox__btn {
+      &:first-child {
+        .viva-toolbox__tooltip {
+          left: 55px;
+          top: 0;
+
+          &::before {
+            bottom: 10px;
+            left: -4px;
+          }
+        }
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        .viva-toolbox__tooltip {
+          left: 55px;
+          top: 0;
+
+          &::before {
+            bottom: 10px;
+            left: -4px;
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        .viva-toolbox__tooltip {
+          left: 0;
+          top: -50px;
+
+          &::before {
+            bottom: -4px;
+            left: 12px;
+            top: unset;
+          }
+        }
+      }
+    }
+  }
+
+  &--disabled {
+    display: none;
+    z-index: -1;
+  }
+
+  &--is-dragging:hover .viva-toolbox__buttons .viva-toolbox__btn {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0s;
+  }
+}

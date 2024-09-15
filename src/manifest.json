@@ -1,0 +1,45 @@
+{
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+  "version": "COPIED FROM PACKAGE.JSON IN WEBPACK BUILD",
+  "manifest_version": 3,
+  "minimum_chrome_version": "104",
+  "permissions": ["activeTab", "storage", "tabs", "tabCapture", "offscreen", "scripting", "downloads", "<all_urls>"],
+  "host_permissions": ["<all_urls>"],
+  "icons": { "128": "/images/viva-logo.png" },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "images/*",
+        "fonts/*",
+        "audio-processor.bundle.js",
+        "audio-interceptor.bundle.js",
+        "extension-reload.bundle.js",
+        "*"
+      ],
+      "matches": ["<all_urls>"]
+    },
+    {
+        "resources": ["transcriptions.html", "transcriptions.bundle.js"],
+        "matches": ["<all_urls>"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://meet.google.com/new*", "https://meet.google.com/*-*-*", "https://meet.google.com/*-*-*?*"],
+      "css": ["common-styles.css", "app-meet-live-cc-styles.css"],
+      "js": ["app-google-meet.bundle.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "background": {
+    "service_worker": "background.bundle.js"
+  },
+  "action": {
+    "default_icon": "/images/viva-logo.png",
+    "default_title": "Viva Translate",
+    "default_popup": "popup.html"
+  }
+}

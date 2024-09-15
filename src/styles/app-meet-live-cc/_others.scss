@@ -1,0 +1,825 @@
+.viva-email-body-class {
+  width: calc(100% - 180px) !important;
+  min-height: 250px !important;
+}
+
+.viva-ci {
+  background-color: rgba(246, 156, 20, 0.4);
+  border-bottom: 3px solid rgba(246, 156, 20, 1);
+  color: black;
+  cursor: pointer;
+}
+
+.viva-gi {
+  background-color: rgba(127, 42, 235, 0.4);
+  border-bottom: 3px solid rgba(127, 42, 235, 1);
+  color: black;
+  cursor: pointer;
+}
+
+.viva-si {
+  background-color: rgba(246, 20, 117, 0.4);
+  border-bottom: 3px solid rgba(246, 20, 117, 1);
+  color: black;
+  cursor: pointer;
+}
+
+.content-line {
+  margin-right: 200px;
+}
+
+.viva-container-translation-box {
+  margin: 22px 14px !important;
+  min-height: 100px !important;
+  overflow-y: auto;
+  background: $vi-white !important;
+  box-shadow: 0 0 4px rgba(39, 42, 44, 0.25) !important;
+  border-radius: 12px !important;
+  padding: 20px !important;
+}
+
+.viva-container-translation-box-absolute {
+  position: absolute;
+  bottom: 16px;
+  right: 200px;
+  left: -12px;
+}
+
+.viva-telpop {
+  position: absolute;
+  z-index: 10000;
+  top: 28px;
+  right: 22px;
+  background-color: #272a2c;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  width: 142px;
+  padding: 28px 8px;
+  box-sizing: border-box;
+  font-family: 'Nunito', serif;
+  color: $vi-white;
+  text-align: center;
+}
+
+.viva-telpop * {
+  box-sizing: border-box;
+}
+
+.viva-checkbox {
+  border-radius: 65536px;
+  border: 1px solid $vi-white;
+  background: #2ff498;
+  cursor: pointer;
+  display: inline-block;
+  height: 12px;
+  margin: 0;
+  position: relative;
+  width: 32px;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.viva-checkbox__input {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+.viva-checkbox__input:checked~.viva-checkbox__indicator {
+  left: 15px;
+}
+
+.viva-checkbox__indicator {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  left: -1px;
+  top: -3px;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(180deg, $vi-white 0%, #e8eaea 100%);
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.viva-icon-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+}
+
+.viva-icon-close:before,
+.viva-icon-close:after {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  border-radius: 1px;
+  background-color: $vi-white;
+}
+
+.viva-icon-close.gray:before,
+.viva-icon-close.gray:after {
+  background-color: #939495;
+}
+
+.viva-icon-close:after {
+  transform: rotate(90deg);
+}
+
+.viva-icon-close.size-l {
+  width: calc(11px * 1.41);
+  height: calc(11px * 1.41);
+}
+
+.viva-telpop__title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  margin: 0 0 4px 0;
+}
+
+.viva-telpop__subtitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 9px;
+  line-height: 11px;
+  text-align: center;
+  margin: 0 0 9px 0;
+}
+
+.viva-context {
+  padding: 0 10px;
+  font-size: 10px;
+  line-height: 14px;
+  margin: 0 0 16px 0;
+}
+
+.viva-context__section+.viva-context__section {
+  margin-top: 8px;
+}
+
+.viva-context__section-title {
+  margin: 0 0 2px 0;
+  font-weight: normal;
+}
+
+.viva-context__button-box {
+  display: flex;
+  width: 100%;
+}
+
+.viva-context__button {
+  display: block;
+  height: 18px;
+  padding: 2px 7px;
+  font-size: 8px;
+  line-height: 12px;
+  font-family: 'Nunito', serif;
+  color: $vi-white;
+  border: 1px solid #fff;
+  border-radius: 65536px;
+  margin-right: 3px;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.viva-context__button_add {
+  width: 26px;
+  padding: 2px 6px;
+}
+
+.viva-icon-add {
+  display: block;
+  width: 12px;
+  height: 12px;
+  position: relative;
+}
+
+.viva-icon-add:before,
+.viva-icon-add:after {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  border-radius: 1px;
+  background-color: $vi-white;
+}
+
+.viva-icon-add:after {
+  transform: rotate(90deg);
+}
+
+.viva-see-translation__title {
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  margin: 0 0 4px 0;
+}
+
+.viva-include-source {
+  margin-top: 5px;
+}
+
+.viva-include-source__title {
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.viva-checkbox_see-translation {
+  display: block;
+  margin: auto;
+}
+
+.viva-footer {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.viva-footer-settings {
+  display: block;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+.viva-footer-logo {
+  margin: 0 -8px -10px auto;
+}
+
+.template-panel {
+  align-items: flex-start;
+  background-color: #272a2c;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  border-radius: 12px;
+  color: $vi-white;
+  display: flex;
+  flex-flow: row nowrap;
+  font-family: 'Nunito', serif;
+  height: $vi-ext-template-panel-height;
+  justify-content: flex-start;
+  padding: 0 $vi-ext-template-panel-padding-x;
+  max-height: $vi-ext-template-panel-height;
+  overflow: hidden;
+  position: absolute;
+  right: 22px;
+  top: 10px;
+  visibility: hidden;
+  width: $vi-ext-template-panel-width;
+  z-index: 10001;
+}
+
+.template-panel__slider {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100%;
+  justify-content: flex-start;
+  max-height: $vi-ext-template-panel-height;
+  min-width: calc(#{$vi-ext-template-panel-width} * 2);
+  overflow-y: auto;
+  position: relative;
+  left: 0;
+  transition: left 0.3s ease-in-out;
+  width: calc(#{$vi-ext-template-panel-width} * 2);
+}
+
+.template-panel__links {
+  display: flex;
+  flex-flow: column nowrap;
+  min-width: calc(#{$vi-ext-template-panel-width} - #{$vi-ext-template-panel-padding-x} * 2);
+  width: calc(#{$vi-ext-template-panel-width} - #{$vi-ext-template-panel-padding-x} * 2);
+}
+
+.template-panel__links p {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  font-weight: 400;
+  margin: 15px 0;
+  padding: 0 5px 10px;
+}
+
+.template-panel__template-link {
+  align-items: center;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 12px;
+  border-width: 1px 0 0 2px;
+  box-shadow: rgba(0, 0, 0, .3) 7px 7px 16px 0, rgba(255, 255, 255, .3) -3px -3px 11px -6px;
+  box-sizing: border-box;
+  color: $vi-white;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row nowrap;
+  font-family: 'Nunito', serif;
+  font-size: 13px;
+  font-weight: 600;
+  justify-content: space-between;
+  margin: 0 auto 15px;
+  padding: 10px 40px 10px 18px;
+  text-align: left;
+  width: 97%;
+}
+
+.template-panel__template-link:nth-child(2) {
+  border-color: #1c55cd;
+}
+
+.template-panel__template-link:nth-child(3) {
+  border-color: #7218ce;
+}
+
+.template-panel__template-link:nth-child(4) {
+  border-color: #a418d6;
+}
+
+.template-panel__template-link:nth-child(5) {
+  border-color: #d418a6;
+}
+
+.template-panel__template-link .arrow-right {
+  position: relative;
+  right: -15px;
+  top: 1px;
+  transition: right 0.2s ease-in-out;
+}
+
+.template-panel__template-link:hover .arrow-right {
+  right: -20px;
+}
+
+.template-panel__template-text {
+  display: flex;
+  flex-flow: column nowrap;
+  min-width: calc(#{$vi-ext-template-panel-width} - 10px - #{$vi-ext-template-panel-padding-x} * 2);
+  padding: 15px;
+  position: relative;
+  width: calc(#{$vi-ext-template-panel-width} - 10px - #{$vi-ext-template-panel-padding-x} * 2);
+}
+
+.template-panel__template-text h3 {
+  font-size: 18px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  margin: 0 auto 15px;
+  max-width: 85%;
+  text-align: center;
+}
+
+.template-panel__text-back-btn {
+  background: transparent;
+  border: none;
+  color: $vi-white;
+  cursor: pointer;
+  left: 10px;
+  position: absolute;
+  top: 17px;
+  transition: left 0.2s ease-in-out;
+}
+
+.template-panel__text-back-btn:hover {
+  left: 8px;
+}
+
+.template-panel__apply-btn {
+  background: $vi-white;
+  border: 1px solid $vi-white;
+  border-radius: 25px;
+  color: $vi-bg-black;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  margin: -17px auto 3px;
+  padding: 7px 24px;
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+  width: fit-content;
+}
+
+.template-panel__apply-btn:hover {
+  transform: scale(1.05);
+}
+
+.text-wrapper-border {
+  border: 1px solid $vi-white;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: $vi-white;
+  font-size: 13px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  height: auto;
+  line-height: 1.5;
+  padding: 15px 15px 30px;
+  width: 100%;
+}
+
+.viva-telpop-button {
+  cursor: pointer;
+  background: #272a2c;
+  color: $vi-white;
+  border: none;
+  border-radius: 14px;
+  font-family: 'Nunito', serif;
+  padding: 8px;
+  font-size: 14px;
+  line-height: 16px;
+  box-shadow: 0 0 4px #1ac774;
+}
+
+.viva-telpop-button-link {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  color: #939495;
+  cursor: pointer;
+}
+
+.viva-telpop-selection.red {
+  background-color: rgba(246, 20, 117, 0.4);
+  border-bottom: 3px solid rgba(246, 20, 117, 1);
+}
+
+.viva-telpop-selection.orange {
+  background-color: rgba(246, 156, 20, 0.4);
+  border-bottom: 3px solid rgba(246, 156, 20, 1);
+}
+
+.viva-telpop-selection.purple {
+  background-color: rgba(127, 42, 235, 0.4);
+  border-bottom: 3px solid rgba(127, 42, 235, 1);
+}
+
+.viva-telpop-window {
+  position: fixed;
+  left: 50px;
+  top: 50px;
+  max-width: 530px;
+  padding: 16px 16px 12px 16px;
+  border-radius: 12px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  font-family: 'Nunito', serif;
+  background: $vi-white;
+  z-index: 50000;
+}
+
+.viva-telpop-window-arrow {
+  position: absolute;
+  width: 30px;
+  height: 24px;
+  overflow: inherit;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.viva-telpop-window-arrow:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 3px;
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  transform-origin: top left;
+  transform: scaleY(1.5) rotate(45deg);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.viva-telpop-window-arrow.top {
+  bottom: 100%;
+}
+
+.viva-telpop-window-arrow.center {
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.viva-telpop-window__header {
+  margin-bottom: 16px;
+}
+
+.viva-telpop-title {
+  color: rgba(246, 20, 117, 1);
+  font-weight: bold;
+}
+
+.viva-telpop-window__footer {
+  padding: 30px 0 0 0;
+}
+
+.viva-telpop-window__content {
+  padding: 30px 0 0 0;
+}
+
+.viva-telpop-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 28px;
+}
+
+.viva-telpop-spellcheck {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+.viva-telpop-spellcheck__col {
+  width: 50%;
+  flex: 1 1 0;
+  padding: 0 23px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.viva-telpop-spellcheck__arrow {
+  display: block;
+  width: 21px;
+  height: 17px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-image: url('chrome-extension://__MSG_@@extension_id__/images/viva-spellcheck-arrow.svg');
+}
+
+.viva-telpop-spellcheck__text {
+  margin-left: auto;
+  font-size: 14px;
+  line-height: 16px;
+  position: relative;
+}
+
+.viva-telpop-spellcheck__text:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #272a2c;
+  margin: auto;
+  opacity: 0.5;
+  z-index: 10;
+}
+
+.viva-icon-add-to-dictionary {
+  display: inline-block;
+  width: 23px;
+  height: 20px;
+  background-image: url('chrome-extension://__MSG_@@extension_id__/images/viva-icon-add-to-dictionary.svg');
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.viva-icon-sad-smile {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('chrome-extension://__MSG_@@extension_id__/images/viva-icon-sad-smile.svg');
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.viva-icon-delete {
+  display: inline-block;
+  width: 18px;
+  height: 20px;
+  background-image: url('chrome-extension://__MSG_@@extension_id__/images/viva-icon-delete.svg');
+  vertical-align: middle;
+}
+
+.viva-telpop-window__footer-buttons {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.viva-telpop-window__footer-button+.viva-telpop-window__footer-button {
+  margin-left: 15px;
+}
+
+.viva-telpop-window__footer-button.viva-telpop-window__footer-button_delete {
+  margin-left: auto;
+}
+
+.noscroll {
+  overflow: hidden !important;
+}
+
+.viva-power-button-main {
+  /* above other viva functionality */
+  z-index: 20000;
+  position: relative;
+}
+
+.viva-powerButton {
+  position: absolute;
+  top: unset;
+  bottom: 32px;
+  right: 22px;
+  background-color: #272a2c;
+  border-radius: 12px;
+  width: 71px;
+  box-sizing: border-box;
+  font-family: 'Nunito', serif;
+  color: $vi-white;
+  text-align: center;
+}
+
+.viva-panel-power-button {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  cursor: pointer;
+}
+
+.viva-panel-power-button-img {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+.viva-power-button-container:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+}
+
+.viva-power-button-container {
+  cursor: pointer;
+  padding-left: 5px;
+}
+
+.viva-power-button {
+  display: inline-block;
+  vertical-align: middle;
+  height: 25px;
+}
+
+.viva-power-button-img {
+  width: 25px;
+}
+
+.viva-power-button-img-off {
+  filter: invert(50%) sepia(0%) saturate(27%) hue-rotate(152deg) brightness(99%) contrast(98%);
+}
+
+.viva-power-button-logo {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.viva-power-button-logo-img {
+  width: 35px;
+  vertical-align: middle;
+  height: 100%;
+}
+
+#viva-btn-layer {
+  height: 100vh;
+  pointer-events: none;
+  position: absolute;
+  width: 100vw;
+  z-index: 101;
+}
+
+.viva-logo {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  pointer-events: all;
+  position: absolute;
+  transition: left 0.2s ease-in-out, top 0.2s ease-in-out;
+  z-index: 15;
+}
+
+.viva-logo>* {
+  pointer-events: none;
+}
+
+button.viva-logo svg {
+  height: 100%;
+  width: fit-content;
+}
+
+button.viva-logo:hover {
+  cursor: pointer;
+}
+
+button.viva-logo:disabled:hover {
+  cursor: not-allowed;
+}
+
+.viva-logo__img {
+  height: 100%;
+  width: fit-content;
+}
+
+/*******************/
+/** CONTEXT MENU **/
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  95% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.icon-context-menu {
+  align-items: flex-end;
+  animation: scale-in-center 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  display: flex;
+  flex-flow: column nowrap;
+  position: absolute;
+  z-index: 1000;
+}
+
+.icon-context-menu__btn {
+  align-items: center;
+  background-color: $vi-bg-black;
+  border: none;
+  border-radius: 25px;
+  color: $vi-orange;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row nowrap;
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 12px 24px;
+  pointer-events: all;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.icon-context-menu__btn:last-child {
+  margin-bottom: 0;
+}
+
+.icon-context-menu__btn--success {
+  transition: transform 0.3s ease-in-out, height 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+.icon-context-menu__btn--success .btn-icon {
+  fill: $vi-orange;
+}
+
+.viva-no-animation *,
+.viva-no-animation *::before,
+.viva-no-animation *::after {
+  &:not(.block-no-animation) {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "translation": {
+    "languages": {
+      "BG": "Bulgarian",
+      "CS": "Czech",
+      "DA": "Danish",
+      "DE": "German",
+      "EL": "Greek",
+      "EN": "English",
+      "ES": "Spanish",
+      "ET": "Estonian",
+      "FI": "Finnish",
+      "FR": "French",
+      "HU": "Hungarian",
+      "ID": "Indonesian",
+      "IT": "Italian",
+      "JA": "Japanese",
+      "KO": "Korean",
+      "LT": "Lithuanian",
+      "LV": "Latvian",
+      "NB": "Norwegian Bokmål",
+      "NL": "Dutch",
+      "PL": "Polish",
+      "PT": "Portuguese",
+      "RO": "Romanian",
+      "RU": "Russian",
+      "SK": "Slovak",
+      "SL": "Slovenian",
+      "SV": "Swedish",
+      "TR": "Turkish",
+      "UK": "Ukrainian",
+      "ZH": "Chinese"
+    },
+    "general": {
+      "ok": "Ok",
+      "detecting": "Detecting...",
+      "select": "Select",
+      "cancel": "Cancel",
+      "copy": "Copy",
+      "copied": "Copied",
+      "live_cc": "Captions",
+      "stop_live_cc": "Stop capturing",
+      "version": "Version"
+    },
+    "general_words": {
+      "no_thanks": "No thanks",
+      "add": "Add",
+      "or": "or"
+    },
+    "notifications": {
+      "reload_popup": {
+        "description": "Please reload the page to use Viva Translate.",
+        "button": "Reload"
+      },
+      "failed_live_cc": {
+        "description": "An error occurred starting capturing the Live CC in the current browser tab. Please reload the page and try again.",
+        "button": "Reload"
+      },
+      "unknown_error": {
+        "description": "An unknown error occurred. Please reload the page and try again. If the problem persists, please contact us.",
+        "button": "Reload"
+      }
+    },
+    "options_popup": {
+      "translation_error": "There was an error in the translation",
+      "toggle_highlight": "Highlight and translate",
+      "toggle_vid_translation": "GMeets translations",
+      "input_placeholder": "Write something in any of the supported languages"
+    },
+    "highlight_box": {
+      "title": "Translation to"
+    },
+    "meetings": {
+      "deactivate_popup_text": "You can re-enable transcripts by clicking on the Viva icon and activating the option.",
+      "speaker_transcription": "Transcription Language",
+      "copied": "Link Copied!",
+      "new_message": "New message",
+      "new_messages": "New messages",
+      "explanation": {
+        "settings": "Change Language preferences and more",
+        "cc": "Show Viva like subtitles in a movie",
+        "side_panel": "Fit Viva's box where its most convenient in your Google meeting",
+        "minimize": "Minimize Viva if you don't want to see the box. It will keep translating unless you pause",
+        "summary": "Check out the summary section to get structured notes for your session"
+      },
+      "viva_messages": {
+        "microphone_target": "Your audio is being transcribed to ",
+        "speaker_target": "The meeting is being transcribed to ",
+        "pause_transcript": "Your transcript has been paused. You will not receive any transcriptions or translations.",
+        "resume_transcript": "Viva will now start transcribing and translating! 🤩"
+      },
+      "settings": {
+        "title": "Settings",
+        "lang_picker_title": "Language setting",
+        "show_own_transcription": "Turn on if you want to see your transcriptions",
+        "learning_mode": "Learning mode"
+      },
+      "summaries": {
+        "placeholder": "No auto-generated summaries yet. They will appear during your conversation."
+      },
+      "tooltips": {
+        "stop_recording": "Finish transcription",
+        "pause_recording": "Pause transcription",
+        "start_recording": "Resume transcription",
+        "minimize": "Minimize Viva",
+        "summary": "Meeting summary",
+        "captions": "Show/hide captions",
+        "settings": "Settings",
+        "pause_suggestion": "Viva will continue transcribing the meeting. If you'd like to pause the transcription, click the pause icon in the top left of the transcript window.",
+        "button": "Okay!",
+        "switchPanel": "Switch panel",
+        "active": "Viva is active",
+        "not_active": "Viva is not active"
+      },
+      "connection_error": {
+        "message": "Your network connection is lost. We are trying to reconnect."
+      }
+    },
+    "errors": {
+      "invalid_lang": "Please try writing a longer sentence in Portuguese, Spanish or English",
+      "selection_error": "The selection couldn't be translated, please try again with a larger piece of text.",
+      "try_again": "Couldn't complete the translation, please try again.",
+      "lang_not_found": "Language not recognized"
+    },
+    "styles": {
+      "size": {
+        "SM": "Small",
+        "MD": "Medium",
+        "LG": "Large"
+      },
+      "subtitle_font": "Subtitle Size"
+    },
+    "any_web_transcription": {
+      "output": "Translate to"
+    },
+    "transcriptions_result": {
+      "show_original": "Show original",
+      "show_translated": "Show translated",
+      "download": "Download",
+      "title": "Title",
+      "type": "Type",
+      "url": "URL",
+      "startTime": "Start time",
+      "transcriptions": "Transcriptions",
+      "summary": "Summary"
+    }
+  }
+}

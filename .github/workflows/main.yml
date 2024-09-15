@@ -1,0 +1,26 @@
+name: Linting and Testing
+
+on: [push]
+
+jobs:
+  linting-testing-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Set example environment variables
+        run: cp .env.example .env
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run Linting
+        run: pnpm run lint
+
+      - name: Test project compilation
+        run: pnpm run build

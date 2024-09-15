@@ -1,0 +1,148 @@
+{
+  "translation": {
+    "languages": {
+      "BG": "Bulgarisch",
+      "CS": "Tschechisch",
+      "DA": "Dänisch",
+      "DE": "Deutsch",
+      "EL": "Griechisch",
+      "EN": "Englisch",
+      "ES": "Spanisch",
+      "ET": "Estnisch",
+      "FI": "Finnisch",
+      "FR": "Französisch",
+      "HU": "Ungarisch",
+      "ID": "Indonesisch",
+      "IT": "Italienisch",
+      "JA": "Japanisch",
+      "KO": "Koreanisch",
+      "LT": "Litauisch",
+      "LV": "Lettisch",
+      "NB": "Norwegisch Bokmål",
+      "NL": "Niederländisch",
+      "PL": "Polnisch",
+      "PT": "Portugiesisch",
+      "RO": "Rumänisch",
+      "RU": "Russisch",
+      "SK": "Slowakisch",
+      "SL": "Slowenisch",
+      "SV": "Schwedisch",
+      "TR": "Türkisch",
+      "UK": "Ukrainisch",
+      "ZH": "Chinesisch"
+    },
+    "general": {
+      "ok": "Ok",
+      "detecting": "Erkennen...",
+      "select": "Auswählen",
+      "cancel": "Abbrechen",
+      "copy": "Kopieren",
+      "copied": "Kopiert",
+      "live_cc": "Untertitel",
+      "stop_live_cc": "Aufnahme beenden",
+      "version": "Version"
+    },
+    "general_words": {
+      "no_thanks": "Nein danke",
+      "add": "Hinzufügen",
+      "or": "oder"
+    },
+    "notifications": {
+      "reload_popup": {
+        "description": "Bitte laden Sie die Seite neu, um Viva Translate zu verwenden.",
+        "button": "Neu laden"
+      },
+      "failed_live_cc": {
+        "description": "Beim Starten der Aufnahme der Live-Untertitel im aktuellen Browser-Tab ist ein Fehler aufgetreten. Bitte laden Sie die Seite neu und versuchen Sie es erneut.",
+        "button": "Neu laden"
+      },
+      "unknown_error": {
+        "description": "Ein unbekannter Fehler ist aufgetreten. Bitte laden Sie die Seite neu und versuchen Sie es erneut. Wenn das Problem weiterhin besteht, kontaktieren Sie uns bitte.",
+        "button": "Neu laden"
+      }
+    },
+    "options_popup": {
+      "translation_error": "Es ist ein Fehler bei der Übersetzung aufgetreten",
+      "toggle_highlight": "Hervorheben und übersetzen",
+      "toggle_vid_translation": "GMeet-Übersetzungen",
+      "input_placeholder": "Schreiben Sie etwas in einer der unterstützten Sprachen"
+    },
+    "highlight_box": {
+      "title": "Übersetzung nach"
+    },
+    "meetings": {
+      "deactivate_popup_text": "Sie können Transkripte erneut aktivieren, indem Sie auf das Viva-Symbol klicken und die Option aktivieren.",
+      "speaker_transcription": "Transkriptionssprache",
+      "copied": "Link kopiert!",
+      "new_message": "Neue Nachricht",
+      "new_messages": "Neue Nachrichten",
+      "explanation": {
+        "settings": "Ändern Sie Spracheinstellungen und mehr",
+        "cc": "Zeigen Sie Viva wie Untertitel in einem Film",
+        "side_panel": "Passen Sie die Box von Viva an, wo sie in Ihrem Google-Meeting am praktischsten ist",
+        "minimize": "Minimieren Sie Viva, wenn Sie die Box nicht sehen möchten. Sie wird weiter übersetzen, es sei denn, Sie pausieren sie",
+        "summary": "Schauen Sie sich den Zusammenfassungsbereich an, um strukturierte Notizen für Ihre Sitzung zu erhalten"
+      },
+      "viva_messages": {
+        "microphone_target": "Ihr Audio wird transkribiert zu ",
+        "speaker_target": "Das Meeting wird transkribiert zu ",
+        "pause_transcript": "Ihr Transkript wurde pausiert. Sie erhalten keine Transkripte oder Übersetzungen mehr.",
+        "resume_transcript": "Viva wird jetzt mit der Transkription und Übersetzung beginnen! 🤩"
+      },
+      "settings": {
+        "title": "Einstellungen",
+        "lang_picker_title": "Spracheinstellung",
+        "show_own_transcription": "Aktivieren, wenn Sie Ihre Transkriptionen sehen möchten",
+        "learning_mode": "Lernmodus"
+      },
+      "summaries": {
+        "placeholder": "Noch keine automatisch generierten Zusammenfassungen vorhanden. Sie werden während Ihres Gesprächs erscheinen."
+      },
+      "tooltips": {
+        "stop_recording": "Transkription beenden",
+        "pause_recording": "Transkription pausieren",
+        "start_recording": "Transkription fortsetzen",
+        "minimize": "Viva minimieren",
+        "summary": "Sitzungszusammenfassung",
+        "captions": "Untertitel anzeigen/ausblenden",
+        "settings": "Einstellungen",
+        "pause_suggestion": "Viva wird weiterhin das Meeting transkribieren. Wenn Sie die Transkription pausieren möchten, klicken Sie auf das Pausensymbol oben links im Transkriptfenster.",
+        "button": "Okay!",
+        "switchPanel": "Panel wechseln",
+        "active": "Viva ist aktiv",
+        "not_active": "Viva ist nicht aktiv"
+      },
+      "connection_error": {
+        "message": "Ihre Netzwerkverbindung ist verloren gegangen. Wir versuchen, eine Verbindung wiederherzustellen."
+      }
+    },
+    "errors": {
+      "invalid_lang": "Bitte versuchen Sie, einen längeren Satz auf Portugiesisch, Spanisch oder Englisch zu schreiben",
+      "selection_error": "Die Auswahl konnte nicht übersetzt werden. Versuchen Sie es erneut mit einem größeren Textstück.",
+      "try_again": "Die Übersetzung konnte nicht abgeschlossen werden. Bitte versuchen Sie es erneut.",
+      "lang_not_found": "Sprache nicht erkannt"
+    },
+    "styles": {
+      "size": {
+        "SM": "Klein",
+        "MD": "Mittel",
+        "LG": "Groß"
+      },
+      "subtitle_font": "Untertitelgröße"
+    },
+    "any_web_transcription": {
+      "output": "Übersetzen nach"
+    },
+    "transcriptions_result": {
+      "show_original": "Original anzeigen",
+      "show_translated": "Übersetzt zeigen",
+      "download": "Herunterladen",
+      "title": "Titel",
+      "type": "Typ",
+      "url": "URL",
+      "startTime": "Startzeit",
+      "transcriptions": "Umschreibungen",
+      "summary": "Zusammenfassung"
+    }
+  }
+}

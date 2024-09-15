@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Viva Translate： 转录谷歌会议和浏览器音频",
+    "description": "Chrome 商店应用名称"
+  },
+  "appDesc": {
+    "message": "转录和翻译实时视频通话等 8 种语言。",
+    "description": "Chrome 商店应用描述"
+  }
+}

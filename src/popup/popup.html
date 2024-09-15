@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" />
+    <link id="popup-link-style" rel="stylesheet" href="./popup-styles.css" />
+    <title>Viva Extension Popup</title>
+  </head>
+  <body>
+    <div class="viva_styles_master">
+      <div class="popup-container popup-container--no-result" id="translation-popup">
+        <div class="popup-container__row error-disable" id="translation-error">
+          <p class="translation-error" id="translation-error-text"></p>
+        </div>
+
+        <div class="popup-container__header" id="header-section">
+          <img src="images/logo/logo-gradient.svg" alt="Viva Logo" draggable="false" />
+          <h1 id="header-section-tite">Viva Translate</h1>
+          <div class="header-actions"></div>
+        </div>
+
+        <div class="popup-container__settings">
+          <label class="template-switch">
+            <input type="checkbox" id="video-call-toggle" />
+            <span class="template-slider template-switch-round"></span>
+          </label>
+          <span class="settings-title" id="video-call-toggle-title"></span>
+          <label class="template-switch">
+            <input type="checkbox" id="highlight-toggle" />
+            <span class="template-slider template-switch-round"></span>
+          </label>
+          <span class="settings-title" id="highlight-toggle-title"></span>
+          <div class="header-actions ml-1"></div>
+          <button type="button" class="header-actions__cta header-actions__cta--text" id="any-web-btn"></button>
+        </div>
+
+        <div class="popup-container__column popup-container__tutorial" id="tutorial-section" hidden></div>
+
+        <div id="translate-section" class="popup-container__column popup-container__translate">
+          <div class="popup-container__original">
+            <div class="popup-container__title">
+              <h1 class="popup-title" id="title-to-translate"></h1>
+            </div>
+
+            <div class="grow-wrap" id="grow-wrap">
+              <button type="button" class="grow-wrap__clear" id="clear-input">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10.192 0.343994L5.94897 4.58599L1.70697 0.343994L0.292969 1.75799L4.53497 5.99999L0.292969 10.242L1.70697 11.656L5.94897 7.41399L10.192 11.656L11.606 10.242L7.36397 5.99999L11.606 1.75799L10.192 0.343994Z"
+                  />
+                </svg>
+              </button>
+              <textarea
+                class="popup-container__translate-input translate-area-text"
+                id="text-to-translate"
+                maxlength="7500"
+                autofocus
+              ></textarea>
+              <span id="char-counter" class="popup-container__char-counter">0/7500</span>
+            </div>
+          </div>
+
+          <div class="popup-container__switch">
+            <button class="popup-container__switch-btn" id="switch-lang-btn">
+              <svg class="btn-icon" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1.9971 7.484C1.77987 7.48378 1.56848 7.5543 1.3949 7.6849C1.22131 7.81549 1.09497 7.99906 1.03498 8.20784C0.974993 8.41662 0.984617 8.63925 1.0624 8.84207C1.14018 9.04489 1.28189 9.21687 1.4661 9.332L4.1541 12.02C4.24701 12.1128 4.3573 12.1865 4.47866 12.2367C4.60003 12.2869 4.7301 12.3127 4.86145 12.3127C4.9928 12.3127 5.12285 12.2867 5.24419 12.2364C5.36552 12.1861 5.47575 12.1124 5.5686 12.0195C5.66144 11.9266 5.73508 11.8163 5.7853 11.6949C5.83552 11.5736 5.86135 11.4435 5.8613 11.3121C5.86125 11.1808 5.83534 11.0507 5.78503 10.9294C5.73472 10.8081 5.66101 10.6978 5.5681 10.605L4.4471 9.485H11.9971C12.2623 9.485 12.5167 9.37964 12.7042 9.19211C12.8917 9.00457 12.9971 8.75022 12.9971 8.485C12.9971 8.21978 12.8917 7.96543 12.7042 7.77789C12.5167 7.59036 12.2623 7.485 11.9971 7.485H1.9971V7.484Z"
+                />
+                <path
+                  d="M16.0117 5.516C16.2289 5.51622 16.4403 5.4457 16.6139 5.31511C16.7875 5.18451 16.9138 5.00095 16.9738 4.79217C17.0338 4.58339 17.0242 4.36076 16.9464 4.15793C16.8686 3.95511 16.7269 3.78313 16.5427 3.668L13.8547 0.980004C13.6671 0.792496 13.4126 0.687208 13.1474 0.687302C12.8821 0.687395 12.6277 0.792864 12.4402 0.980505C12.2527 1.16815 12.1474 1.42259 12.1475 1.68786C12.1476 1.95313 12.2531 2.2075 12.4407 2.395L13.5617 3.515H6.01172C5.7465 3.515 5.49215 3.62036 5.30461 3.8079C5.11708 3.99543 5.01172 4.24979 5.01172 4.515C5.01172 4.78022 5.11708 5.03457 5.30461 5.22211C5.49215 5.40965 5.7465 5.515 6.01172 5.515H16.0117V5.516Z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="popup-container__translation">
+            <div class="popup-container__icon-loading" id="loading-icon"></div>
+            <div class="popup-container__title" id="title-translated"></div>
+            <div class="popup-container__translate-output" id="translated-box">
+              <p class="translate-area-text" id="translated-text"></p>
+            </div>
+            <div class="popup-container__buttons-actions-translate">
+              <button class="popup-container__copy-btn" id="copy-btn">
+                <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10 14V15.25C10 15.6642 9.66422 16 9.25 16H0.75C0.335781 16 0 15.6642 0 15.25V3.75C0 3.33578 0.335781 3 0.75 3H3V12.25C3 13.215 3.78503 14 4.75 14H10ZM10 3.25V0H4.75C4.33578 0 4 0.335781 4 0.75V12.25C4 12.6642 4.33578 13 4.75 13H13.25C13.6642 13 14 12.6642 14 12.25V4H10.75C10.3375 4 10 3.6625 10 3.25ZM13.7803 2.28034L11.7197 0.219656C11.579 0.0790133 11.3882 1.03999e-06 11.1893 0L11 0V3H14V2.81066C14 2.61175 13.921 2.42099 13.7803 2.28034V2.28034Z"
+                    fill="#666666"
+                  />
+                </svg>
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                  <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                  <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="popup-container__viva-version"><span id="viva-version"></span></div>
+      </div>
+      <script src="./popup.bundle.js"></script>
+    </div>
+  </body>
+</html>

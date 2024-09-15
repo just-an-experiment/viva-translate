@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Viva Translate: Trascrivere Google Meets e l'audio del browser",
+    "description": "Nome dell'app nel Chrome Store"
+  },
+  "appDesc": {
+    "message": "Trascrivete e traducete videochiamate in tempo reale e altro ancora in 8 lingue.",
+    "description": "Descrizione dell'app nel Chrome Store"
+  }
+}

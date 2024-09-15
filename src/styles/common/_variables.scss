@@ -1,0 +1,70 @@
+/* DEFAULT COLORS VARS */
+$vi-primary-color: #7e2cf4;
+$vi-secondary-color: #f7d34b;
+$vi-green: #1bd0a3;
+$vi-bg-black: #272a2c;
+$vi-bg-gray: #faf9f9;
+$vi-button-grey: #e5e5e5;
+$vi-button-bg-color: #473F50;
+$vi-black: #000;
+$vi-blue: #0e72ec;
+$vi-disable-red: #e66a6a;
+$vi-danger-red: #e61549;
+$vi-hover-bg-gray: #e9e9e9;
+$vi-grey: #BABABA;
+$vi-dark-gray: #545454;
+$vi-orange: #f69c14;
+$vi-white: #fff;
+$vi-border-grey: #cfcfcf;
+$vi-border-color: #2E2E35;
+$vi-text-color: #3c3c3c;
+$vi-blur-bg-color: rgba(11, 4, 20, 0.7);
+$vi-dark-purple: #0b0414;
+$vi-bg-purple: #785edc0d;
+$vi-bg-purple-light: #2b2336;
+$vi-bg-toast: #362C44;
+$vi-header-color: #1C1723;
+$vi-purple: #c7a3ff;
+$vi-pink: #D16663;
+$vi-pink-bg: #d1666333;
+$vi-mid-grey: #28262B;
+
+/* Speaker Colors */
+$vi-speaker-1: #DAFDFB;
+$vi-speaker-2: #DACFF1;
+$vi-speaker-3: #CFF1D2;
+$vi-speaker-4: #FCF3D4;
+$vi-speaker-5: #CFD9F1;
+$vi-speaker-6: #F1CFCF;
+$vi-speaker-7: #F0CFF1;
+$vi-speaker-8: #B19F9E;
+$vi-speaker-other: #BABABA;
+
+/* Gradients */
+$vi-primary-g-1: #BE97F9;
+$vi-primary-g-1-border: rgba(126, 44, 244, 0.8);
+$vi-primary-g-2: #BCD7FB;
+$vi-primary-g-2-border: rgba(44, 136, 244, 0.5);
+$vi-primary-gradient: -webkit-linear-gradient($vi-primary-g-1, $vi-primary-g-2) !important;
+
+/* FONTS VARS */
+$vi-title-font: 'Inter', sans-serif;
+$vi-text-font: 'Inter', sans-serif;
+
+/* POPUP DEFAULT VARS */
+$vi-popup-check-curve: cubic-bezier(0.65, 0, 0.45, 1);
+$vi-popup-width: 490px;
+$vi-popup-boxshadow: 0 8px 10px -2.5px rgba(16, 24, 40, 0.1);
+
+/* CONTENT DEFAULT VARS */
+$ease-in-quad: cubic-bezier(0.7, 0, 0.84, 0);
+$vi-ext-check-curve: cubic-bezier(0.65, 0, 0.45, 1);
+$vi-ext-template-arrow-margin: 5px;
+$vi-ext-template-panel-height: 255px;
+$vi-ext-template-panel-padding-x: 10px;
+$vi-ext-template-panel-width: 275px;
+
+// ICONS
+$vi-url-icon: url('chrome-extension://__MSG_@@extension_id__/images/viva-logo-32.svg');
+$vi-url-icon-text: url('chrome-extension://__MSG_@@extension_id__/images/viva-text.svg');
+$vi-url-option-bg: url('chrome-extension://__MSG_@@extension_id__/images/options-bg.jpg');

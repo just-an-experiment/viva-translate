@@ -1,0 +1,12 @@
+/* statics  */
+@import '../common/_typography';
+
+.viva_styles_content {
+  /* statics  */
+  @import '../common/_variables';
+  @import '../common/_mixins';
+  @import '../common/_extends';
+  @import '../common/components/_buttons';
+
+  @import '../app-meet-live-cc/_notifications';
+}

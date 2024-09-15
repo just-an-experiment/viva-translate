@@ -1,0 +1,368 @@
+/** Select to Translate Feature **/
+.translate-pill {
+  align-items: center !important;
+  background-color: $vi-white !important;
+  border: 0 transparent !important;
+  border-radius: 50px !important;
+  box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.2) !important;
+  color: $vi-black !important;
+  cursor: pointer !important;
+  display: flex !important;
+  font-family: $vi-text-font;
+  flex-flow: row nowrap !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  height: 28px !important;
+  padding: 0 16px !important;
+  position: absolute !important;
+  width: fit-content !important;
+  z-index: 1000000001 !important;
+
+  &:hover, &:focus {
+    box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  &-btn-input {
+    display: flex;
+    border-radius: 5px;
+    padding: 0 2px;
+    align-items: center;
+    background-color: $vi-white;
+    border: 0 transparent;
+    box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.2);
+    color: $vi-black;
+    cursor: pointer;
+    height: 28px;
+    position: absolute;
+    width: auto;
+    text-align: center;
+    z-index: 1001;
+
+    &:hover, &:focus {
+      box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    &-input-small {
+      height: 24px !important;
+
+      & svg {
+        height: 20px !important;
+      }
+    }
+
+    & svg {
+      height: 24px !important;
+      width: fit-content !important;
+    }
+  }
+
+  &-popup {
+    animation: scale-appear .35s;
+    animation-delay: 0s !important;
+    background-color: $vi-white !important;
+    border-radius: 10px !important;
+    box-shadow: $vi-popup-boxshadow !important;
+    cursor: auto !important;
+    height: auto;
+    position: absolute;
+    transition: height .15s ease-in-out;
+    will-change: top, left, height;
+    text-shadow: none !important;
+    z-index: 1000000000000;
+  }
+
+  &-panel {
+    background-color: $vi-dark-purple !important;
+  }
+}
+
+.select-translate-popup {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  justify-content: flex-start;
+  text-align: left !important;
+  will-change: left, top, height, width;
+  width: 100%;
+
+  &[hidden] {
+    display: none;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  & * {
+    box-sizing: border-box;
+  }
+
+  /* Buttons */
+  &__speak-btn, &__pin-btn {
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    cursor: pointer;
+    display: flex;
+    height: 25px;
+    justify-content: center;
+    min-width: 30px;
+    opacity: 1;
+    padding: 0 10px;
+    pointer-events: all;
+    position: relative;
+    width: 30px;
+
+    & svg {
+      fill: black;
+      height: 16px;
+      min-width: 16px;
+      z-index: 2;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__copy-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 10px;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      background-color: transparent !important;
+      border: 0 !important;
+      border-radius: 50px;
+      content: '';
+      height: 30px;
+      left: calc(50% - 15px);
+      position: absolute;
+      top: calc(50% - 15px);
+      transition: background-color 0.2s ease-in-out;
+      width: 30px;
+      z-index: 0;
+    }
+
+    .checkmark {
+      min-width: 0;
+      z-index: 2;
+    }
+
+    svg {
+      height: 16px;
+      pointer-events: none;
+      width: 14px;
+      z-index: 2;
+
+      path {
+        fill: $vi-text-color;
+        transition: fill .2s ease-in-out;
+      }
+    }
+
+    &:hover {
+      &::before {
+        background-color: #eeeeee !important;
+        border: 0 !important;
+      }
+
+      svg,
+      svg path {
+        fill: $vi-primary-color;
+      }
+    }
+
+    &--success {
+      transition: transform 0.3s ease-in-out, height 0.3s ease-in-out, width 0.3s ease-in-out;
+
+      &:hover::before {
+        background-color: transparent !important;
+      }
+
+      .checkmark {
+        animation: fill 0.3s ease-in-out 0.3s forwards, scale 0.3s ease-in-out 0.6s both;
+        fill: $vi-primary-color;
+        height: 16px !important;
+        margin-left: 10px;
+        visibility: visible;
+        min-width: 16px !important;
+        width: 16px !important;
+
+        &__circle {
+          fill: $vi-primary-color;
+        }
+      }
+
+      &.btn-icon {
+        fill: $vi-primary-color;
+      }
+    }
+  }
+  /* End Buttons */
+
+  /* HEADER */
+  &__header {
+    align-items: center;
+    border-bottom: 1px solid #3c3c3c;
+    cursor: move !important;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    overflow: hidden !important;
+    padding: 5px 5px 5px 15px !important;
+    min-height: 40px;
+    width: 100%;
+
+    > svg {
+      height: auto;
+      margin-right: 10px;
+      width: 25px;
+    }
+
+    .viva-select {
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      line-height: 30px !important;
+      letter-spacing: 0.3px !important;
+      margin: 0 auto 0 2px !important;
+      padding: 0 5px !important;
+
+      &::-ms-expand {
+        display: none;
+      }
+    }
+  }
+
+  /* TITLE */
+  &__title {
+    align-items: center;
+    border: 0 !important;
+    color: $vi-text-color !important;
+    display: flex;
+    flex-flow: row nowrap;
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    line-height: 30px !important;
+    letter-spacing: 0.3px !important;
+    margin: 0 !important;
+    text-decoration: none !important;
+    text-align: left !important;
+    text-transform: none !important;
+    text-shadow: none !important;
+    user-select: none !important;
+    width: fit-content !important;
+  }
+
+  &:not(.transcription-box) {
+    .select-translate-popup__title {
+      padding: 0 !important;
+    }
+  }
+
+  & .loading-spinner {
+    height: 30px;
+    margin: 0 auto;
+    min-height: 30px;
+    min-width: 30px;
+    width: 30px;
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: column nowrap;
+    height: calc(100% - 55px);
+    overflow: hidden;
+    padding: 10px 15px;
+    width: 100%;
+  
+    & span {
+      color: $vi-text-color !important;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      height: auto;
+      line-height: normal !important;
+    }
+  }
+
+  &__drag-btn:focus {
+    overflow: none !important;
+  }
+}
+
+/** Highlight box specific styles */
+.highlight-box {
+  animation: appear .5s;
+  animation-delay: .6s;
+  animation-fill-mode: forwards;
+  box-sizing: border-box;
+  height: 0;
+  max-height: 95vh;
+  opacity: 0;
+  transition: top .1s ease-in, height .1s ease-in !important;
+
+  .select-translate-popup {
+    &__content {
+      padding-bottom: 0 !important;
+      height: fit-content;
+
+      span {
+        margin-bottom: 5px !important;
+      }
+    }
+  }
+
+  &.no-top-transition,
+  &--is-dragging {
+    transition: height .1s ease-in !important;
+  }
+}
+
+.highlight-login-popup {
+  padding: 15px 0 30px !important;
+
+  .login-popup__cta {
+    margin-top: -10px;
+  }
+}
+
+/* Tooltip button */
+.translate-pill-btn-input-tooltip {
+  background-color: $vi-bg-black;
+  border-radius: 6px;
+  bottom: 150%;
+  box-sizing: border-box !important;
+  color: #fff;
+  font-family: $vi-text-font;
+  font-size: 14px !important;
+  min-height: 28px;
+  height: fit-content;
+  left: 50%;
+  margin-left: -55px;
+  padding: 5px 16px;
+  position: absolute;
+  text-align: center;
+  visibility: hidden;
+  width: fit-content;
+  z-index: 100000000 !important;
+
+  &:after {
+    border-color: $vi-bg-black transparent transparent transparent;
+    border-style: solid;
+    border-width: 5px;
+    content: "";
+    left: 50%;
+    margin-left: $vi-ext-template-arrow-margin;
+    position: absolute;
+    top: 100%;
+  }
+}
+

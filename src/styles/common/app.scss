@@ -1,0 +1,35 @@
+/* statics  */
+@import './_typography';
+
+.viva_styles_content {
+  /* statics  */
+  @import './_variables';
+  @import './_mixins';
+  @import './_animations';
+  @import './_extends';
+
+  /* components */
+  @import './components/_select';
+  @import './components/_buttons';
+
+  .hidden {
+    display: none;
+  }
+
+  .mt-2 {
+    margin-top: 0.5rem;
+  }
+
+  .noscroll {
+    overflow: hidden !important;
+  }
+
+  .unselectable {
+    user-select: none !important;
+    -moz-user-select: none !important;
+    -webkit-user-select: none !important;
+    -ms-user-select: none !important;
+  }
+
+  @include checkMark();
+}

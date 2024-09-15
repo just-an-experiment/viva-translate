@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/Manrope-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/Manrope-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/Nunito-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/Nunito-ExtraBold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/Inter-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/Inter-Bold.ttf');
+  font-weight: 600;
+  font-style: normal;
+}

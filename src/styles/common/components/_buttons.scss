@@ -1,0 +1,104 @@
+.viva-primary-btn {
+    background-color: $vi-primary-color !important;
+    border: none !important;
+    border-radius: 11px !important;
+    color: $vi-white !important;
+    cursor: pointer !important;
+    font-family: $vi-text-font !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    outline: 0 !important;
+    padding: 10px 18px !important;
+    transition: box-shadow .15s ease-in-out, transform .15s ease-in-out !important;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0.5em 0.5em -0.4em darken($vi-primary-color, 3%) !important;
+      transform: translateY(-1px) !important;
+    }
+}
+
+.viva-gradient-btn {
+  background: $vi-primary-gradient;
+  box-shadow: 0px 2px 4px rgba(126, 44, 244, 0.2) !important;
+  bottom: 0;
+  border-radius: 10px !important;
+  border: 0;
+  color: $vi-black !important;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: $vi-text-font !important;
+  font-size: 13px !important;
+  height: fit-content;
+  padding: 8px 12px;
+  position: relative;
+  transition: bottom .2s ease-in-out, box-shadow .2s ease-in-out;
+  will-change: bottom, box-shadow;
+
+  &:hover,
+  &:focus {
+    background: $vi-primary-gradient;
+    bottom: 1px !important;
+    box-shadow: 0 0.5em 0.7em -0.4em $vi-primary-g-1 !important;
+  }
+
+  &:focus,
+  &:active {
+    outline: 0 !important;
+  }
+
+  &::before {
+    background: -webkit-linear-gradient($vi-primary-g-1-border, $vi-primary-g-2-border);
+    bottom: -1px;
+    border-radius: 11px;
+    content: '';
+    left: -1px;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    z-index: -1;
+  }
+}
+
+.viva-secondary-btn {
+  background-color: $vi-hover-bg-gray !important;
+  border: none !important;
+  border-radius: 11px !important;
+  color: $vi-dark-gray !important;
+  cursor: pointer !important;
+  font-family: $vi-text-font !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  outline: 0 !important;
+  padding: 10px 18px !important;
+  transition: box-shadow .15s ease-in-out, transform .15s ease-in-out !important;
+
+  &:hover:not([disabled]),
+  &:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em darken($vi-border-grey, 15%) !important;
+    transform: translateY(-1px) !important;
+  }
+}
+
+.viva-tertiary-btn {
+  @extend .viva-secondary-btn;
+
+  background-color: transparent !important;
+  border: 1px solid $vi-border-grey !important;
+  color: $vi-white !important;
+}
+
+.viva-text-btn {
+  background: none;
+  border: none;
+  color: $vi-white;
+  cursor: pointer;
+  font-family: $vi-text-font;
+  font-size: 13px;
+  font-weight: 600;
+  outline: 0;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

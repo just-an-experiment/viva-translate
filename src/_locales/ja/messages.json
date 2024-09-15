@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "ビバ翻訳： Google Meets & ブラウザの音声を書き起こす",
+    "description": "Chromeストアアプリ名"
+  },
+  "appDesc": {
+    "message": "8ヶ国語でリアルタイムのビデオ通話などを書き起こし、翻訳します。",
+    "description": "Chromeストアアプリの説明"
+  }
+}

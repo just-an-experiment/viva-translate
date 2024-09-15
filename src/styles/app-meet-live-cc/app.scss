@@ -1,0 +1,23 @@
+.viva_styles_content {
+  /* statics  */
+  @import '../common/_variables';
+  @import '../common/_mixins';
+  @import '../common/_animations';
+  @import '../common/_extends';
+  @import '../common/components/_buttons';
+
+  /* components */
+  @import './components/_tooltip';
+  @import './components/_modal';
+  @import './components/_slider';
+  @import './components/error-popup';
+  @import './components/resize-container';
+  @import '../app-highlight-to-translate/_highlight';
+
+  @import '_transcription-box';
+  @import '_others';
+  @import 'login-popup';
+  @import '_toolbox';
+  @import '_subtitle-frame';
+  @import '_notifications';
+}

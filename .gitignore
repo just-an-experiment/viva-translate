@@ -1,0 +1,15 @@
+node_modules/
+dist/
+*.zip
+
+*.pem
+*.crx
+
+.DS_Store
+
+.vscode/
+.idea/
+.env
+
+## Config file generated on build time.
+src/config/build.config.js
